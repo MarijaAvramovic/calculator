@@ -12,29 +12,33 @@ I will commit early & often.
 Here are some use cases (expectations about your project):
 
 - Your calculator is going to contain functions for all of the basic math operators you typically find on calculators, so start by creating functions for the following items and testing them in your browser’s console:
-add
-subtract
-multiply
-divide
+add create function a + b
+subtract function a - b
+multiply function a * b
+divide function a / b
 
-- A calculator operation will consist of a number, an operator, and another number. For example, 3 + 5. 
+
+- A calculator operation will consist of a number, an operator, and another number. For example, 3 + 5. on click =
 
 - Create three variables, one for each part of the operation. You’ll use these variables to update your display later.
+1st number opetation 2nd number 
 
 - Create a new function operate that takes an operator and two numbers and then calls one of the above functions on the numbers.
+5th f operate calls other function use if
 
 - Create a basic HTML calculator with buttons for each digit and operator (including =).
-Don’t worry about making them functional just yet.
+Don’t worry about making them functional just yet. 10 buttons for digits, 4 btns for operators and one button for =
 
-- There should also be a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct.
+- There should also be a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct. 
+display or div or input
 
-- Add a “clear” button.
+- Add a “clear” button. 16th btn
 
-- Create the functions that populate the display when you click the digit buttons. You should store the content of the display (the number) in a variable for use in the next step.
+- Create the functions that populate the display when you click the digit buttons. You should store the content of the display (the number) in a variable for use in the next step. new function on click add it in display and save the value
 
 - Make the calculator work! You’ll need to store the first and second numbers input by the user and then operate() on them when the user presses the = button, according to the operator that was selected between the numbers.
 
-- You should already have the code that can populate the display, so once operate has been called, update the display with the result of the operation.
+- You should already have the code that can populate the display, so once operate has been called, update the display with the result of the operation. 
 This is the hardest part of the project. You need to figure out how to store all the values and call the operate function with them. Don’t feel bad if it takes you a while to figure out the logic.
 
 - Gotchas: watch out for and fix these bugs if they show up in your code:
