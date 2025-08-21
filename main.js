@@ -1,5 +1,16 @@
 console.log("hi");
 
+const addOperator = '+';
+const subtractOperator = '-';
+const multiplyOperator = '*';
+const divideOperator = '/';
+
+let num1;
+let num2; 
+
+// variables
+
+
 
 function addNumbers(a, b) {
 
@@ -49,3 +60,4 @@ console.log(multiplyNumbers(1,2));
 console.log(subtractNumbers(1,2));
 console.log(divideNumbers(1,2));
 console.log(divideNumbers(1,0));
+
