@@ -4,7 +4,7 @@ const addOperator = '+';
 const subtractOperator = '-';
 const multiplyOperator = '*';
 const divideOperator = '/';
-let storedButtonValue = "";
+let  storedFirstNumber= "";
 
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
@@ -78,15 +78,18 @@ function operate(operator, num1, num2) {
             // Access the value of the clicked button
 			 
            const btnValue = this.value;
-		  storedButtonValue += btnValue;
+		  storedFirstNumber += btnValue;
 			 
 			
             // Display the stored value (optional)
             // display.textContent = userNumber;
-			display.textContent =  storedButtonValue;
+			display.textContent =  storedFirstNumber;
+
+			
+
  
         });
-		 
+		 console.log(storedFirstNumber);
 	
 	} );// foreach
 		
@@ -101,4 +104,7 @@ function operate(operator, num1, num2) {
 // console.log(divideNumbers(1,0));
 
 // console.log(operate('/',5 , 0));
+
+
+
 
