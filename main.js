@@ -75,5 +75,5 @@ function operate(operator, num1, num2) {
 // console.log(divideNumbers(1,2));
 // console.log(divideNumbers(1,0));
 
-console.log(operate('/',5 , 0));
+// console.log(operate('/',5 , 0));
 

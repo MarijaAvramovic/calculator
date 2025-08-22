@@ -1,3 +1,23 @@
 p {
     background-color: red;
 }
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 10px 200px;
+}
+
+.calculator {
+    background-color: rgb(200, 211, 207);
+    height: 440px;
+    border-radius: 4.1%;
+    padding: 5px;
+}
+.display {
+    margin-top: 14px;
+    background-color: rgb(230, 239, 235);
+    height: 40px;
+    border-radius: 1.9%;
+    border: 0.5px solid black;
+}
