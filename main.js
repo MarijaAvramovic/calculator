@@ -4,6 +4,10 @@ const addOperator = '+';
 const subtractOperator = '-';
 const multiplyOperator = '*';
 const divideOperator = '/';
+let storedButtonValue = "";
+
+const numbersBtn = document.querySelectorAll(".numbersBtn");
+const display = document.querySelector(".display");
 
 let num1;
 let num2; 
@@ -68,6 +72,27 @@ function operate(operator, num1, num2) {
 		return divideNumbers(num1, num2);
 	} 
 }//function opetate
+
+    numbersBtn.forEach(button => {
+		button.addEventListener('click', function(event) {
+            // Access the value of the clicked button
+			 
+           const btnValue = this.value;
+		  storedButtonValue += btnValue;
+			 
+			
+            // Display the stored value (optional)
+            // display.textContent = userNumber;
+			display.textContent =  storedButtonValue;
+ 
+        });
+		 
+	
+	} );// foreach
+		
+		
+		
+		
 
 // console.log(addNumbers(1,2));
 // console.log(multiplyNumbers(1,2));

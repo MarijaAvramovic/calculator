@@ -15,10 +15,27 @@ body {
     padding: 5px;
 }
 .display {
+    padding: 10px ;
     margin-top: 14px;
     background-color: rgb(230, 239, 235);
     height: 40px;
     border-radius: 1.9%;
     border: 0.5px solid black;
 }
+.clear {
+      margin-top: 14px;
+    background-color: rgb(48, 98, 75);
+}
+.equal {
+      margin-top: 14px;
+    background-color: rgb(124, 188, 158);
+}
+.numbers {
+      margin-top: 14px;
+    background-color: rgb(137, 206, 174);
+}
 
+.operators {
+      margin-top: 14px;
+    background-color: rgb(153, 177, 166);
+}
