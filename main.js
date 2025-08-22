@@ -55,9 +55,25 @@ function divideNumbers(a, b) {
 }
 // basic math 
 
-console.log(addNumbers(1,2));
-console.log(multiplyNumbers(1,2));
-console.log(subtractNumbers(1,2));
-console.log(divideNumbers(1,2));
-console.log(divideNumbers(1,0));
+function operate(operator, num1, num2) {
+	if(operator === divideOperator && num2 === 0){
+		alert("no");
+	} else if(operator === addOperator) {
+		return addNumbers(num1, num2);
+	} else if(operator === subtractOperator) {
+		return subtractNumbers(num1, num2);
+	} else if(operator === multiplyOperator) {
+		return multiplyNumbers(num1, num2);
+	} else if (operator === divideNumbers){
+		return divideNumbers(num1, num2);
+	} 
+}//function opetate
+
+// console.log(addNumbers(1,2));
+// console.log(multiplyNumbers(1,2));
+// console.log(subtractNumbers(1,2));
+// console.log(divideNumbers(1,2));
+// console.log(divideNumbers(1,0));
+
+console.log(operate('/',5 , 0));
 
