@@ -8,6 +8,7 @@ let  storedNumber= "";
 let allValues = [];
 let result;
 
+
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
 
@@ -25,7 +26,12 @@ function addNumbers(a, b) {
 
 	result = a + b;
 
+	if(result !== Math.floor(result)){
+
+		return parseFloat(result.toFixed(2));
+	}  
 	return result;
+	
 }
 
 function subtractNumbers(a, b) {
@@ -33,13 +39,18 @@ function subtractNumbers(a, b) {
 
 	result = a - b;
 
+	if(result !== Math.floor(result)){
+		return parseFloat(result.toFixed(2));
+	}  
 	return result;
 }
 
 function multiplyNumbers(a, b) {
 
 	result = a * b;
-
+	if(result !== Math.floor(result)){
+		return parseFloat(result.toFixed(2));
+	}  
 	return result;
 }
 
@@ -49,10 +60,11 @@ function divideNumbers(a, b) {
         alert("no!");
         return false;
     } else {
-	let result;
 
 	result = a / b;
-
+		if(result !== Math.floor(result)){
+		return parseFloat(result.toFixed(2));
+	}  
 	return result;
 
     }
@@ -108,14 +120,14 @@ function operate(operator, num1, num2) {
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
 
-			 allValues.push(parseInt(storedNumber));
+			 allValues.push(parseFloat(storedNumber));
 
 
 		   if (allValues.length > 2) {
 				display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 				storedNumber = operate(allValues[1], allValues[0], allValues[2]);
 				allValues.length = 0;
-				allValues.push(parseInt(storedNumber));
+				allValues.push(parseFloat(storedNumber));
 				// storedNumber = "";
 			}
 			allValues.push(this.value);
@@ -137,7 +149,7 @@ function operate(operator, num1, num2) {
 	equal.addEventListener('click', function() {
             // Access the value of the clicked button
 			 
-		  allValues.push(parseInt(storedNumber));
+		  allValues.push(parseFloat(storedNumber));
 			 
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 
