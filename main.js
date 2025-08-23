@@ -18,6 +18,8 @@ let num2;
 
 const equal = document.querySelector(".equal");
 
+const clearBtn = document.querySelector(".clear");
+
 // variables
 
 
@@ -101,16 +103,7 @@ function operate(operator, num1, num2) {
         
 			storedNumber += this.value;
 
-		  display.textContent += this.value;
-
-
-			
-			
-			 
-			
-
-		 
- 
+		  display.textContent += this.value; 
         });
 	 
 	 
@@ -133,13 +126,6 @@ function operate(operator, num1, num2) {
 			allValues.push(this.value);
 			display.textContent += this.value;
 		   storedNumber = "";
-
-		  
-			 
-			 
-			
-
-		 
  
         });
 	  
@@ -147,19 +133,20 @@ function operate(operator, num1, num2) {
 	} );
  
 	equal.addEventListener('click', function() {
-            // Access the value of the clicked button
 			 
 		  allValues.push(parseFloat(storedNumber));
 			 
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 
-			 
-
-		 
- 
         });
 	 
-	 
+
+	 clearBtn.addEventListener('click', function() {
+		storedNumber = "";
+		allValues.length = 0;
+		display.textContent = "";
+
+        });
 	
  
 	
