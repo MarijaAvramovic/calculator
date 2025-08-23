@@ -6,6 +6,7 @@ const multiplyOperator = '*';
 const divideOperator = '/';
 let  storedNumber= "";
 let allValues = [];
+let result;
 
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
@@ -22,8 +23,6 @@ const equal = document.querySelector(".equal");
 
 function addNumbers(a, b) {
 
-	let result;
-
 	result = a + b;
 
 	return result;
@@ -31,7 +30,6 @@ function addNumbers(a, b) {
 
 function subtractNumbers(a, b) {
 
-	let result;
 
 	result = a - b;
 
@@ -39,8 +37,6 @@ function subtractNumbers(a, b) {
 }
 
 function multiplyNumbers(a, b) {
-
-	let result;
 
 	result = a * b;
 
@@ -64,18 +60,26 @@ function divideNumbers(a, b) {
 // basic math 
 
 function operate(operator, num1, num2) {
-	if(operator === divideOperator) {
-		if(num2 === 0){
-			alert("no");
-		} else {return divideNumbers(num1, num2);}
-	} else if(operator === addOperator) {
-		return addNumbers(num1, num2);
-	} else if(operator === subtractOperator) {
-		return subtractNumbers(num1, num2);
-	} else if(operator === multiplyOperator) {
-		return multiplyNumbers(num1, num2);
-	} 
-}//function opetate
+
+	switch (operator) {
+  case divideOperator:
+   return divideNumbers(num1, num2);
+    break;
+  case addOperator:
+      return  addNumbers(num1, num2);
+    break;
+   case multiplyOperator:
+      return  multiplyNumbers(num1, num2);
+    break;
+	case subtractOperator:
+      return  subtractNumbers(num1, num2);
+    break;
+  default:
+  return  alert("error");
+	break;
+}
+	
+}
 
     numbersBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
