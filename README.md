@@ -73,7 +73,7 @@ To see what this looks like in action, feel free to input the equation we just e
 
 - Add keyboard support!
 
-- time spent: 
+- time spent: 8hr
 
 - Warning about eval() and new Function()
 Before you get started with the project, we need to cover a word of warning.

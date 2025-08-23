@@ -59,7 +59,7 @@ function multiplyNumbers(a, b) {
 function divideNumbers(a, b) {
 
     if(b === 0) {
-        alert("no!");
+        alert("An error occurred: Please check your input. Cant divide by 0");
         return false;
     } else {
 
@@ -77,7 +77,12 @@ function operate(operator, num1, num2) {
 
 	switch (operator) {
   case divideOperator:
-   return divideNumbers(num1, num2);
+    divideNumbers(num1, num2);
+	if (result){
+		return result;
+	} else {
+		clearAll();
+	}
     break;
   case addOperator:
       return  addNumbers(num1, num2);
@@ -95,6 +100,13 @@ function operate(operator, num1, num2) {
 	
 }
 
+
+function clearAll(){
+	storedNumber = "";
+	allValues.length = 0;
+	display.textContent = "";
+
+}
     numbersBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
             // Access the value of the clicked button
@@ -142,10 +154,7 @@ function operate(operator, num1, num2) {
 	 
 
 	 clearBtn.addEventListener('click', function() {
-		storedNumber = "";
-		allValues.length = 0;
-		display.textContent = "";
-
+		clearAll();
         });
 	
  
