@@ -103,8 +103,18 @@ function operate(operator, num1, num2) {
 
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
-             allValues.push(parseInt(storedNumber));
-           allValues.push(this.value);
+
+			 allValues.push(parseInt(storedNumber));
+
+
+		   if (allValues.length > 2) {
+				display.textContent = operate(allValues[1], allValues[0], allValues[2]);
+				storedNumber = operate(allValues[1], allValues[0], allValues[2]);
+				allValues.length = 0;
+				allValues.push(parseInt(storedNumber));
+				// storedNumber = "";
+			}
+			allValues.push(this.value);
 			display.textContent += this.value;
 		   storedNumber = "";
 
