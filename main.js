@@ -4,7 +4,8 @@ const addOperator = '+';
 const subtractOperator = '-';
 const multiplyOperator = '*';
 const divideOperator = '/';
-let  storedFirstNumber= "";
+let  storedNumber= "";
+let allValues = [];
 
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
@@ -12,6 +13,8 @@ const display = document.querySelector(".display");
 const operatorsBtn = document.querySelectorAll(".operatorsBtn");
 let num1;
 let num2; 
+
+const equal = document.querySelector(".equal");
 
 // variables
 
@@ -79,9 +82,14 @@ function operate(operator, num1, num2) {
             // Access the value of the clicked button
 			 
 			 
-           const btnValue = this.value;
-		  display.textContent += btnValue;
-			 
+        
+			storedNumber += this.value;
+
+		  display.textContent += this.value;
+
+
+			
+			 allValues.push(parseInt(storedNumber));
 			 
 			
 
@@ -91,14 +99,15 @@ function operate(operator, num1, num2) {
 	 
 	 
 	} );// foreach
-
+ 
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
-            // Access the value of the clicked button
-			 
-			 
-           const operatorValue = this.value;
-		  display.textContent += operatorValue;
+            
+           allValues.push(this.value);
+			display.textContent += this.value;
+		   storedNumber = "";
+
+		  
 			 
 			 
 			
@@ -106,14 +115,26 @@ function operate(operator, num1, num2) {
 		 
  
         });
-	 
+	  
 	 
 	} );
  
- 
-		
+	equal.addEventListener('click', function() {
+            // Access the value of the clicked button
+			 
 		 
-		
+			 
+			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
+
+		 
+ 
+        });
+	 
+	 
+	
+ 
+	
+	 
 
 // console.log(addNumbers(1,2));
 // console.log(multiplyNumbers(1,2));
