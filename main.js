@@ -64,16 +64,16 @@ function divideNumbers(a, b) {
 // basic math 
 
 function operate(operator, num1, num2) {
-	if(operator === divideOperator && num2 === 0){
-		alert("no");
+	if(operator === divideOperator) {
+		if(num2 === 0){
+			alert("no");
+		} else {return divideNumbers(num1, num2);}
 	} else if(operator === addOperator) {
 		return addNumbers(num1, num2);
 	} else if(operator === subtractOperator) {
 		return subtractNumbers(num1, num2);
 	} else if(operator === multiplyOperator) {
 		return multiplyNumbers(num1, num2);
-	} else if (operator === divideNumbers){
-		return divideNumbers(num1, num2);
 	} 
 }//function opetate
 
@@ -89,7 +89,7 @@ function operate(operator, num1, num2) {
 
 
 			
-			 allValues.push(parseInt(storedNumber));
+			
 			 
 			
 
@@ -99,10 +99,11 @@ function operate(operator, num1, num2) {
 	 
 	 
 	} );// foreach
- 
+   
+
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
-            
+             allValues.push(parseInt(storedNumber));
            allValues.push(this.value);
 			display.textContent += this.value;
 		   storedNumber = "";
@@ -122,9 +123,11 @@ function operate(operator, num1, num2) {
 	equal.addEventListener('click', function() {
             // Access the value of the clicked button
 			 
-		 
+		  allValues.push(parseInt(storedNumber));
 			 
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
+
+			 
 
 		 
  
