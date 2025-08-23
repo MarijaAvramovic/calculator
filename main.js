@@ -9,6 +9,7 @@ let  storedFirstNumber= "";
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
 
+const operatorsBtn = document.querySelectorAll(".operatorsBtn");
 let num1;
 let num2; 
 
@@ -77,24 +78,41 @@ function operate(operator, num1, num2) {
 		button.addEventListener('click', function(event) {
             // Access the value of the clicked button
 			 
+			 
            const btnValue = this.value;
-		  storedFirstNumber += btnValue;
+		  display.textContent += btnValue;
+			 
 			 
 			
-            // Display the stored value (optional)
-            // display.textContent = userNumber;
-			display.textContent =  storedFirstNumber;
 
-			
-
+		 
  
         });
-		 console.log(storedFirstNumber);
-	
+	 
+	 
 	} );// foreach
+
+	 operatorsBtn.forEach(button => {
+		button.addEventListener('click', function(event) {
+            // Access the value of the clicked button
+			 
+			 
+           const operatorValue = this.value;
+		  display.textContent += operatorValue;
+			 
+			 
+			
+
+		 
+ 
+        });
+	 
+	 
+	} );
+ 
+ 
 		
-		
-		
+		 
 		
 
 // console.log(addNumbers(1,2));
