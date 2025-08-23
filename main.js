@@ -111,7 +111,10 @@ function clearAll(){
 		button.addEventListener('click', function(event) {
             // Access the value of the clicked button
 			 
-			 
+			 if (isDisplayed) {
+				clearAll();
+				isDisplayed = false;
+			 }
         
 			storedNumber += this.value;
 
@@ -124,17 +127,25 @@ function clearAll(){
 
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
+			 
+			if (storedNumber !== "") {
+				allValues.push(parseFloat(storedNumber));
+			}
+			 
 
-			 allValues.push(parseFloat(storedNumber));
-
-
-		   if (allValues.length > 2) {
-				display.textContent = operate(allValues[1], allValues[0], allValues[2]);
+				if (allValues.length > 2) {
+			
+							display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 				storedNumber = operate(allValues[1], allValues[0], allValues[2]);
 				allValues.length = 0;
 				allValues.push(parseFloat(storedNumber));
 				// storedNumber = "";
-			}
+					
+			
+		}
+
+			
+		   
 			allValues.push(this.value);
 			display.textContent += this.value;
 		   storedNumber = "";
@@ -143,13 +154,13 @@ function clearAll(){
 	  
 	 
 	} );
- 
+	let isDisplayed = false;
 	equal.addEventListener('click', function() {
 			 
 		  allValues.push(parseFloat(storedNumber));
 			 
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
-
+			isDisplayed = true;
         });
 	 
 
