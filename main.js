@@ -7,6 +7,7 @@ const divideOperator = '/';
 let  storedNumber= "";
 let allValues = [];
 let result;
+let isDisplayed = false;
 
 
 const numbersBtn = document.querySelectorAll(".numbersBtn");
@@ -127,25 +128,46 @@ function clearAll(){
 
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
-			 
-			if (storedNumber !== "") {
-				allValues.push(parseFloat(storedNumber));
-			}
-			 
 
+
+			if(storedNumber !== ""){
+		allValues.push(parseFloat(storedNumber));
+		}
+
+
+			 if(allValues.length == 2) {
+				 
+				allValues.splice(1, 2);
+				display.textContent = allValues;
+						 
+				// console.log(allValues);
+
+					
+			 } 
+		
+				
+		
+ 
+					
+console.log(allValues);
 				if (allValues.length > 2) {
-			
-							display.textContent = operate(allValues[1], allValues[0], allValues[2]);
+				
+					
+
+				display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 				storedNumber = operate(allValues[1], allValues[0], allValues[2]);
 				allValues.length = 0;
 				allValues.push(parseFloat(storedNumber));
+					
+							
 				// storedNumber = "";
 					
 			
 		}
 
-			
-		   
+			 
+		   	
+			 
 			allValues.push(this.value);
 			display.textContent += this.value;
 		   storedNumber = "";
@@ -154,11 +176,11 @@ function clearAll(){
 	  
 	 
 	} );
-	let isDisplayed = false;
+
 	equal.addEventListener('click', function() {
 			 
 		  allValues.push(parseFloat(storedNumber));
-			 
+			
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 			isDisplayed = true;
         });
