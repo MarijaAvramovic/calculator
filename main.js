@@ -22,6 +22,8 @@ const equal = document.querySelector(".equal");
 const clearBtn = document.querySelector(".clear");
 
 const decimalBtn = document.querySelector(".decimalBtn");
+
+const backBtn = document.querySelector(".backBtn");
 // variables
 
 
@@ -109,6 +111,7 @@ function clearAll(){
 	display.textContent = "";
 
 }
+
     numbersBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
             // Access the value of the clicked button
@@ -204,7 +207,10 @@ console.log(allValues);
 		 display.textContent += this.value; 
         });
 	
-	
+		
+
+
+		
 	 
 
 // console.log(addNumbers(1,2));
