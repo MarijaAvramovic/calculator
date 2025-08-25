@@ -15,11 +15,9 @@ I used commit early & often.
 
 - A function operate  is created that takes an operator and two numbers and then calls one of the basic functions on the numbers used swith.
 
-
 - Buttons created with a basic HTML, for each digit and operator (including =).
 
 - There is also a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct. 
-display or div or input
 
 - Add a “clear” button. 16th btn
 
