@@ -1,35 +1,24 @@
 # calculator
 
 Introduction
-This project is showing practice of fundamentals of JavaScript. It is going to combine everything you’ve learned so far: you’re going to make an on-screen calculator using JavaScript, HTML, and CSS.
-
-We’re going to walk you through the various steps you can take.
-
+This is on-screen calculator that includes JavaScript, HTML, and CSS.
 
 ### Assignment
-I will commit early & often.
-
-Here are some use cases (expectations about your project):
-
-- Your calculator is going to contain functions for all of the basic math operators you typically find on calculators, so start by creating functions for the following items and testing them in your browser’s console:
-add create function a + b
-subtract function a - b
-multiply function a * b
-divide function a / b
+I used commit early & often.
 
 
-- A calculator operation will consist of a number, an operator, and another number. For example, 3 + 5. on click =
+- The calculator contains functions for 4 of the basic math operators you typically find on calculators.
 
-- Create three variables, one for each part of the operation. You’ll use these variables to update your display later.
-1st number opetation 2nd number 
+- A calculator operation can consist of a number, an operator, and another number.
 
-- Create a new function operate that takes an operator and two numbers and then calls one of the above functions on the numbers.
-5th f operate calls other function use if
+- In order to create three variables, one for each part of the operation, used as well to update your display later. I used array to help me out with data. 
 
-- Create a basic HTML calculator with buttons for each digit and operator (including =).
-Don’t worry about making them functional just yet. 10 buttons for digits, 4 btns for operators and one button for =
+- A function operate  is created that takes an operator and two numbers and then calls one of the basic functions on the numbers used swith.
 
-- There should also be a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct. 
+
+- Buttons created with a basic HTML, for each digit and operator (including =).
+
+- There is also a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct. 
 display or div or input
 
 - Add a “clear” button. 16th btn
@@ -73,7 +62,7 @@ To see what this looks like in action, feel free to input the equation we just e
 
 - Add keyboard support!
 
-- time spent: 8hr
+- time spent: 10hr
 
 - Warning about eval() and new Function()
 Before you get started with the project, we need to cover a word of warning.

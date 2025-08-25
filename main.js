@@ -1,21 +1,33 @@
 console.log("hi");
 
+
+
 const addOperator = '+';
 const subtractOperator = '-';
 const multiplyOperator = '*';
 const divideOperator = '/';
+
 let  storedNumber= "";
 let allValues = [];
+
+let firstNum;
+let secondNum;
+let userOperator;
+
+let displayInfo;
 let result;
 let isDisplayed = false;
 
+let num1;
+let num2; 
+
+ const dummyText = document.getElementById("dummyText");
 
 const numbersBtn = document.querySelectorAll(".numbersBtn");
 const display = document.querySelector(".display");
 
 const operatorsBtn = document.querySelectorAll(".operatorsBtn");
-let num1;
-let num2; 
+
 
 const equal = document.querySelector(".equal");
 
@@ -24,6 +36,8 @@ const clearBtn = document.querySelector(".clear");
 const decimalBtn = document.querySelector(".decimalBtn");
 
 const backBtn = document.querySelector(".backBtn");
+
+
 // variables
 
 
@@ -109,18 +123,23 @@ function clearAll(){
 	storedNumber = "";
 	allValues.length = 0;
 	display.textContent = "";
+	display.appendChild(dummyText);
+
 
 }
 
     numbersBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
-            // Access the value of the clicked button
-			 
+          if( display.contains(dummyText)){
+			dummyText.remove();
+		  }
 			 if (isDisplayed) {
 				clearAll();
+				display.textContent = "";
 				isDisplayed = false;
 			 }
-        
+        console.log(display.innerHTML);
+		console.log(dummyText);
 			storedNumber += this.value;
 
 		  display.textContent += this.value; 
