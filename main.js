@@ -21,6 +21,7 @@ const equal = document.querySelector(".equal");
 
 const clearBtn = document.querySelector(".clear");
 
+const decimalBtn = document.querySelector(".decimalBtn");
 // variables
 
 
@@ -129,7 +130,7 @@ function clearAll(){
 	 operatorsBtn.forEach(button => {
 		button.addEventListener('click', function(event) {
 
-
+			decimalBtn.disabled = false;
 			if(storedNumber !== ""){
 		allValues.push(parseFloat(storedNumber));
 		}
@@ -183,14 +184,26 @@ console.log(allValues);
 			
 			display.textContent = operate(allValues[1], allValues[0], allValues[2]);
 			isDisplayed = true;
+
+			decimalBtn.disabled = false;
         });
 	 
 
 	 clearBtn.addEventListener('click', function() {
 		clearAll();
+		decimalBtn.disabled = false;
         });
 	
- 
+  decimalBtn.addEventListener('click', function() {
+
+		if (storedNumber !== Math.floor(storedNumber)){
+			this.disabled = true;
+
+		}
+		 storedNumber += this.value;
+		 display.textContent += this.value; 
+        });
+	
 	
 	 
 
