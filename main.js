@@ -138,11 +138,11 @@ function clearAll(){
 				display.textContent = "";
 				isDisplayed = false;
 			 }
-        console.log(display.innerHTML);
-		console.log(dummyText);
+
 			storedNumber += this.value;
 
 		  display.textContent += this.value; 
+		  
         });
 	 
 	 
@@ -226,11 +226,7 @@ console.log(allValues);
 		 display.textContent += this.value; 
         });
 	
-		
 
-
-		
-	 
 
 // console.log(addNumbers(1,2));
 // console.log(multiplyNumbers(1,2));

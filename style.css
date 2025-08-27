@@ -21,19 +21,24 @@ body {
     border: 0.5px solid black;
 }
 .clear {
+    padding: 10px;
       margin-top: 14px;
     background-color: rgb(48, 98, 75);
+    margin-bottom: 10px;
 }
 .equal {
+    padding: 10px;
       margin-top: 14px;
     background-color: rgb(124, 188, 158);
 }
 .numbers {
+    padding: 10px;
       margin-top: 14px;
     background-color: rgb(137, 206, 174);
 }
 
 .operators {
+    padding: 10px;
       margin-top: 14px;
     background-color: rgb(153, 177, 166);
 }

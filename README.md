@@ -15,54 +15,44 @@ I used commit early & often.
 
 - A function operate  is created that takes an operator and two numbers and then calls one of the basic functions on the numbers used swith.
 
-- Buttons created with a basic HTML, for each digit and operator (including =).
+- Buttons are created with a basic HTML, for each digit and operator (including =).
 
-- There is also a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct. 
+- There is also a display for the calculator. Showing dummy numbers.
 
-- Add a “clear” button. 16th btn
+- The "clear” button erases all. Pressing “clear” wipes out any existing data. Make sure the user is really starting fresh after pressing “clear”.
 
-- Create the functions that populate the display when you click the digit buttons. You should store the content of the display (the number) in a variable for use in the next step. new function on click add it in display and save the value
+- Display value is stored as first number once user click on operator right after stored number is cleared making room for 2nd number.
 
-- Make the calculator work! You’ll need to store the first and second numbers input by the user and then operate() on them when the user presses the = button, according to the operator that was selected between the numbers.
+-  Operator is also stored in array as second element.
 
-- You should already have the code that can populate the display, so once operate has been called, update the display with the result of the operation. 
-This is the hardest part of the project. You need to figure out how to store all the values and call the operate function with them. Don’t feel bad if it takes you a while to figure out the logic.
+- I stored all the values in array and called the operate function with them.
 
-- Gotchas: watch out for and fix these bugs if they show up in your code:
-
-- Your calculator should not evaluate more than a single pair of numbers at a time. For example, this is how your calculator should function:
+- The calculator can not evaluate more than a single pair of numbers at a time.(For example:
 Enter a number (12).
 Enter an operator (+).
 Enter a second number (7).
 Enter a second operator (-). At this point, it should evaluate the initial pair of numbers (12 + 7), then display the result (19).
 Enter another number (1).
 Enter another operator or equals sign (=). At this point, it should use the previous result (19) as the first number, the operator (-), and the new number (1) to calculate the new equation 19 - 1. You should see the result (18) on the display.
-To see what this looks like in action, feel free to input the equation we just explained 12 + 7 - 1 = into this online calculator.
+To see what this looks like in action, feel free to input the equation we just explained 12 + 7 - 1 = into this online calculator.)
 
-- You should round answers with long decimals so that they don’t overflow the display.
+- The answers are rounded so long decimals don’t overflow the display.
 
-- Pressing = before entering all of the numbers or an operator could cause problems!
+- Pressing = before entering all of the numbers or an operator cis showing an error.
 
-- Pressing “clear” should wipe out any existing data. Make sure the user is really starting fresh after pressing “clear”.
+- If the user tries to divide by 0 it shows an error message.
 
-- Display a snarky error message if the user tries to divide by 0… and don’t let it crash your calculator!
+-If consecutive operator buttons are pressed, the calculator will not run any evaluations, it will only take the last operator entered to be used for the next operation.
 
-- Make sure that your calculator only runs an operation when supplied with two numbers and an operator by the user. Example: you enter a number (2), followed by an operator button (+). You press the operator button (+) a second consecutive time. Your calculator should not evaluate this as (2 + 2) and should not display the result (4). If consecutive operator buttons are pressed, your calculator should not run any evaluations, it should only take the last operator entered to be used for the next operation.
-
-- When a result is displayed, pressing a new digit should clear the result and start a new calculation instead of appending the digit to the existing result. Check whether this is the case on your calculator!
+- When a result is displayed, pressing a new digit will clear the result and start a new calculation instead of appending the digit to the existing result. 
 
 
 ### Extra credit
 
-- Users can get floating point numbers if they do the math required to get one, but they can’t type them in yet. Add a . button and let users input decimals! Make sure you don’t let them type more than one though, like: 12.3.56.5. Disable the . button if there’s already a decimal separator in the display.
+- The button "." lets users input decimals. The btn is disabled if there’s already a decimal separator in the display.
 
-- Add a “backspace” button, so the user can undo their last input if they click the wrong number. 
+- The “backspace” button is not functional yet
 
 - Add keyboard support!
 
-- time spent: 10hr
-
-- Warning about eval() and new Function()
-Before you get started with the project, we need to cover a word of warning.
-- As you look into how to evaluate complex mathematical statements in JavaScript, you will likely come across the tantalizing eval() function. However, this function can be very dangerous and MDN does a good job documenting why you should never use eval! 
-- You’ll need to build your own functions to evaluate expressions as part of this project. On the same note, when researching how to calculate expressions, you may encounter solutions that suggest that you return a new Function() that evaluates a string. Similarly to eval(), this should not be used due to potential pitfalls of evaluating insecure data. Besides, where’s the fun in solutions that do all the work for you? Let’s get to it!
+- time spent: 12hr
